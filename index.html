@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Pei-Yun Hite</title>
@@ -12,12 +15,12 @@
     <header>
         <h1>PEI-YUN HITE</h1>
         <ul>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#">Contact Me</a></li>
         </ul>
-    </header>
+    </header> 
     <section class="main">
         <div class="info">
             <img class="person-pic" src="./assets/images/olly-pic.svg" alt="Main-Picture">
@@ -26,7 +29,139 @@
             <p>Front-end Engineer</p>
             <!-- <img class="bg-pic" src="./assets/images/main-bg.png" alt=""> -->
         </div>
-        <a class="more">View About me more >></a>
+        <a class="more" href="#about-me">View About me more >></a>
     </section>
+    <section class="block2" id="about-me">
+        <div class="about-me">
+            <h1>About Me</h1>
+            <p>Front-end Engineer with two year experience in designing and developing user interface,
+                testing, debugging, and maintaining web-sites. Good communication with back-end
+                engineers and project managers.</p>
+        <div class="line-left"></div>
+        </div>
+        <div class="education">
+            <h1>Education</h1>
+            <div class="info">
+                <div class="each-section">
+                    <p class="year">2022</p>
+                    <div class="info-detail">
+                        <h3>Full Stack Bootcamp</h3>
+                        <p>
+                            University of Denver <br>
+                            Denver CO, USA
+                        </p>
+                    </div>
+                </div>
+                <div class="each-section">
+                    <p class="year">2020</p>
+                    <div class="info-detail">
+                        <h3>UIUX and Website Desiger Bootcamp</h3>
+                        <p>
+                            Institute for Information Industry <br>
+                            Taipei, Taiwan
+                        </p>
+                    </div>
+                </div>
+                <div class="each-section">
+                    <p class="year">2020-2013</p>
+                    <div class="info-detail">
+                        <h3>Business Administration</h3>
+                        <p>
+                            Shih Hsin University <br>
+                            Taipei, Taiwan
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="line-right"></div>
+        </div>
+        <div class="work" id="work">
+            <h1>Work<br>Experience</h1>
+            <div class="info">
+                <div class="each-section">
+                    <p class="year">2020-2021</p>
+                    <ul class="info-detail list">
+                        <li>Use React.js/Django to create and build to
+                        websites</li>
+                        <li>Developed user-friendly websites, communicated
+                            with UX developer, product managers and
+                            back-end engineers to meet customers needs
+                        </li>
+                        <li>Fixed bugs from existing websites and maintained
+                            or improved web functionality</li>
+                        <li>Participated in projects from begining until
+                            release and the testing process</li>
+                        <li>Developed a website to connect with webRTC for
+                            testing with our camera devices</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="line-left"></div>
+        </div>
+        <div class="skill">
+            <h1>Skill &<br>Expertise</h1>
+            <div class="info">
+                <div class="each-section">
+                    <p class="year"></p>
+                    <ul class="info-detail list">
+                        <li>Html5 / CSS3 / SCSS /Bootstrap</li>
+                        <li>JavaScript ES6 / JQuery</li>
+                        <li>React.js / Redux.js / Django</li>
+                        <li>Ajax / API</li>
+                        <li>Photoshop / Illustrator</li>
+                        <li>Adobe XD / Sketch / Figma</li>
+                        <li>Git / GitHub / Bitbucket / npm / Docker</li>
+                        <li>Jira / Trello</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="line-left"></div>
+        </div>
+    </section>
+    <section class="block3 project" id="projects">
+        <h1>Projects</h1>
+        <div class="project-section">
+            <div class="img">
+                <img src="./assets/images/faithplaceoutdoor_img.png" alt="">
+                <p class="shadow"></p>
+            </div>
+            <div class="project-detail">
+                <h3>FaithPlaceOutdoors</h3>
+                <p>Non-Profits Website</p>
+            </div>
+        </div>
+        <!-- <div class="project-section">
+            <div class="project-detail">
+                <h3>HomePlus</h3>
+                <p>System Platform</p>
+            </div>
+            <div class="img">
+                <img class="homeplus" src="./assets/images/homeplus_img.png" alt="">
+                <p class="shadow"></p>
+            </div>
+        </div> -->
+        <div class="project-section">
+            <div class="project-detail">
+                <h3>WATZ</h3>
+                <p>Stocks Shopping Websites</p>
+            </div>
+            <div class="img">
+                <img src="./assets/images/watz_img.png" alt="">
+                <p class="shadow"></p>
+            </div>
+        </div>
+    </section>
+    <!-- <footer>
+        <p>2022 By Pei-Yun Hite.</p>
+    </footer> -->
 </body>
+<script>
+    //header fix and will show bgc
+    function changeCss() {
+            var bodyElement = document.querySelector("body");
+            var navElement = document.querySelector("header");
+            this.scrollY > 100 ? navElement.style.backgroundColor = "#F3F3F3" : navElement.style.backgroundColor = "";
+        }
+        window.addEventListener("scroll", changeCss, false);
+</script>
 </html>
