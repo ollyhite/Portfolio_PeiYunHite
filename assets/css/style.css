@@ -3,6 +3,7 @@
     --text-gray: #5F5D5D;
     --text-pink: #D9B4B3;
     --text-blue: #262934;
+    --headerHight:10vh;
 }
 
 
@@ -25,7 +26,6 @@ body{
     width: 100vw;
     height: 100%;
     background-color: var(--bg-color);
-    overflow-x: hidden;
     position: relative;
     scroll-behavior: smooth;
 }
@@ -115,6 +115,9 @@ header ul li a:active {
     }
 }
 @media screen and (max-width: 450px) {
+    header{
+        height: 8%;
+    }
     header h1 {
         font-size: 1.5rem;
     }
@@ -203,7 +206,7 @@ header ul li a:active {
     .moble-show {
         display: block;
     }
-    .info h1 {
+    .main .info h1 {
         color: var(--text-gray);
         position: relative;
         font-size: 4rem;
@@ -213,7 +216,7 @@ header ul li a:active {
         margin-top: 20px;
     }
 
-    .info p {
+    .main .info p {
         color: var(--text-gray);
         position: relative;
         font-size: 2rem;
@@ -227,7 +230,6 @@ header ul li a:active {
         bottom: 5%;
         margin-right: 20px;
     }
-  
 }
 
 @media screen and (max-width: 450px) {
@@ -235,19 +237,23 @@ header ul li a:active {
         width: 250px;
     }
 
-    .info h1 {
+    .main .info h1 {
         font-size: 2rem;
     }
 
-    .info p {
+    .main .info p {
         font-size: 1.2rem;
         margin-top: 20px;
     }
 }
 
 @media screen and (max-width: 450px){
+    .main .info h1{
+        font-size: 2.5rem;
+    }
     .main a{
         font-size: 00.8rem;
+        left: 25%;
     }
 }
 
@@ -258,7 +264,7 @@ header ul li a:active {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 60px;
+    padding-top: var(--headerHight);
     position: relative;
 }
 .about-me{
@@ -280,6 +286,21 @@ header ul li a:active {
 .about-me p{
     margin-top: 20px;
     text-align: center;
+}
+
+@media screen and (max-width: 900px){
+    .about-me{
+        width: 100vw;
+        padding: 0 10vh;
+        height: 30vh;
+    }
+}
+@media screen and (max-width: 500px){
+    .about-me {
+        height: 30vh;
+        text-align: left;
+        padding: 0 10%;
+    }
 }
 
 .line-left{
@@ -308,6 +329,7 @@ header ul li a:active {
 .education h1{
     font-size: 1.5rem;
 }
+
 .block2 .info{
     margin-top: 40px;
     display: flex;
@@ -331,20 +353,102 @@ header ul li a:active {
 }
 
 .info-detail.list{
-   margin-left: 15px;
+    margin-left: 15px;
 }
 
 .info-detail.list li{
     margin-bottom: 20px;
 }
+
+@media screen and (max-width: 900px) {
+    .education {
+        width: 100vw;
+        height: 70vh;
+        padding: 0 10vh;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .education .info {
+        height: 60vh;
+    }
+
+    .each-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .info-detail{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .education {
+        width: 100vw;
+        height: 80vh;
+        padding: 0 10vh;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .education .each-section {
+        width: 100%;
+        display: flex;
+    }
+    
+}
+
+@media screen and (max-width: 450px) {
+    .education {
+        width: 100vw;
+        height: 70vh;
+        padding: 0 10%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .block2 .info {
+        width: 100%;
+    }
+
+    .each-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .info-detail{
+        width: 100%;
+    }
+
+    .info-detail h3{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .education .year{
+        width: 50px;
+    }
+    .education .info {
+        width: 100%;
+    }
+
+    .each-section {
+        width: 100%;
+        display: flex;
+    }
+}
+
 .work {
     width: 100%;
-    height: 50vh;
+    height: 70vh;
     padding: 0 20vh;
     display: flex;
     justify-content: space-between;
     position: relative;
-    margin-top: 10vh;
+    padding-top: var(--headerHight);
 }
 .work h1 {
     font-size: 1.5rem;
@@ -370,6 +474,68 @@ header ul li a:active {
 .skill ul {
     list-style-type: disc;
 }
+@media screen and (max-width: 900px) {
+    .work {
+        height: 80vh;
+        padding: 0 10vh;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 5vh;
+    }
+    /* .worl .info-detail{
+        margin-top: 30px;
+    } */
+    .skill{
+        height: 60vh;
+        padding: 0 10vh;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 0vh;
+        margin-top: 0;
+    }
+}
+@media screen and (max-width: 600px) {
+    .work {
+        height: 70vh;
+        padding-top: 10vh;
+    }
+    .work .each-section{
+        flex-direction: column;
+    }
+    .info-detail.list li{
+        width: 60vw;
+    }
+
+    .skill {
+        height: 70vh;
+        padding-top: 10vh;
+    }
+    
+    .skill .each-section {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .work {
+        height: 70vh;
+        padding: 0 10%;
+    }
+    .skill{
+        height: 70vh;
+        padding: 0 10%;
+    }
+    .info-detail{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .work {
+        height: 80vh;
+    }
+}
+
 
 /* block3 */
 
@@ -381,6 +547,7 @@ header ul li a:active {
     margin-top: 60px;
     position: relative;
     padding-bottom: 15vh;
+    padding-top: var(--headerHight);
 }
 
 .block3 h1{
@@ -398,10 +565,16 @@ header ul li a:active {
 .project-section h3{
     color: var(--text-gray);
 }
+
 .project-section .img{
     position: relative;
 }
 
+.img img{
+    width: 70vw;
+    height: 100%;
+    object-fit: cover;
+}
 .shadow{
     position: absolute;
     width: 100%;
@@ -432,14 +605,42 @@ header ul li a:active {
     filter: blur(8px);
     -webkit-filter: blur(3px);
 }
-
+@media screen and (max-width:1250px) {
+    .project-section{
+        flex-direction: column;
+    }
+    .project-detail{
+        margin-top: 10%;
+    }
+    .img img{
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+    }
+    .project-section.reverse{
+        flex-direction: column-reverse;
+    }
+}
+@media screen and (max-width: 900px) {
+    .block3 h1 {
+        padding: 0 10vh;
+    }
+}
+@media screen and (max-width: 450px) {
+    .block3 h1{
+        padding: 0 10%;
+    }
+}
 /* contact block */
 .contact-title{
     width: 100%;
     padding: 0 20vh;
     margin-top: 60px;
+    padding-top: var(--headerHight);
 }
-
+.contact-title .line-left {
+    display: none;
+}
 .contact-title h1 {
     font-size: 1.5rem;
     margin-bottom: 15px;
@@ -468,6 +669,10 @@ header ul li a:active {
     flex-direction: column;
     /* border: 1px solid rebeccapurple; */
 }
+.contact-info .left .line-right{
+    display: none;
+}
+
 .left .info-detail{
     height: 50px;
     margin-bottom: 30px;
@@ -500,6 +705,63 @@ header ul li a:active {
     width: 80%;
     background-color: var(--text-gray);
     color: var(--bg-color);
+    transition: all .8s;
+}
+
+.right button:hover{
+    background-color: var(--text-pink);
+}
+
+@media screen and (max-width: 900px) {
+    .contact-title{
+        position: relative;
+        padding-bottom: 5%;
+    }
+    .contact-title .line-left{
+        display: block;
+    }
+    .contact-info .left .line-right {
+        display: block;
+    }
+    .contact{
+        padding: 0;
+    }
+    .contact-info {
+        width: 100vw;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .contact-info .left{
+        width: 100%;
+        margin-bottom: 10%;
+        position: relative;
+        padding-bottom: 5%;
+    }
+    .left .info-detail{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contact-info .right{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .contact-title {
+        padding: 0 10vh;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .contact-title {
+        height: 10vh;
+        padding: 0 10%;
+    }
 }
 
 /* footer */

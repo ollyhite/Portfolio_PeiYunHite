@@ -13,13 +13,13 @@
 </head>
 <body>
     <a class="top" id="topBtn" onclick="topFunction()">TOP</a>
-    <header>
+    <header id="header">
         <h1><a href="#home">PEI-YUN HITE</a></h1>
         <ul>
             <li><a href="#about-me">About Me</a></li>
             <li><a href="#work">Work</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#">Contact Me</a></li>
+            <li><a href="#contact">Contact Me</a></li>
         </ul>
     </header> 
     <section class="main" id="home">
@@ -116,10 +116,10 @@
                     </ul>
                 </div>
             </div>
-            <div class="line-left"></div>
+            <div class="line-right"></div>
         </div>
     </section>
-    <section class="block3 project" id="projects">
+    <section class="block3" id="projects">
         <h1>Projects</h1>
         <div class="project-section">
             <div class="img">
@@ -141,7 +141,7 @@
                 <p class="shadow"></p>
             </div>
         </div> -->
-        <div class="project-section">
+        <div class="project-section reverse">
             <div class="project-detail">
                 <h3>WATZ</h3>
                 <p>Stocks Shopping Websites</p>
@@ -154,9 +154,10 @@
         <div class="line-right"></div>
 
     </section>
-    <section class="contact-title">
+    <section class="contact-title" id="contact">
         <h1>Get In Touch</h1>
         <p class="sub-title">Looking forward to hearing from you</p>
+        <div class="line-left"></div>
     </section>
     <section class="contact">
         <div class="contact-info">
@@ -173,6 +174,7 @@
                     <h3>Phone</h3>
                     <p>(720) 877-5223</p>
                 </div>
+            <div class="line-right"></div>
             </div>
             <form class="right" action="">
                     <div class="input-sec">
@@ -227,6 +229,9 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
+        
+        var headerHeight = document.getElementById("header").offsetHeight();
+        console.log("headerHeight", headerHeight);
         
 </script>
 </html>
