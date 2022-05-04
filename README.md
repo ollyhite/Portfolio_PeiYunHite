@@ -12,7 +12,7 @@ git clone https://github.com/ollyhite/Portfolio_PeiYunHite.git
 - CSS
 - JavaScript
 
-## Portfolio Main page
+## Portfolio Main Page
 
 ![Portfolio_wireframe](./assets/images/Pei-Yun%20Hite%20-%20portfolio%20pahe%20screenshot.png)
 
