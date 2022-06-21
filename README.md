@@ -1,9 +1,5 @@
 # Portfolio_PeiYunHite
 
-## Live Link
-
-https://ollyhite.github.io/Portfolio_PeiYunHite/
-
 ## Installation
 
 ```
@@ -16,7 +12,7 @@ git clone https://github.com/ollyhite/Portfolio_PeiYunHite.git
 - CSS
 - JavaScript
 
-## Portfolio Main page
+## Portfoli Main page
 
 ![Portfolio_wireframe](./assets/images/Pei-Yun%20Hite%20-%20portfolio%20pahe%20screenshot.png)
 

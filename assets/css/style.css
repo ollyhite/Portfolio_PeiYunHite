@@ -20,7 +20,12 @@
     color: var(--text-gray);
     scroll-behavior: smooth;
 }
-
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: var(--text-pink);
+}
 
 body{
     width: 100vw;
@@ -569,6 +574,7 @@ header ul li a:active {
 .project-section .img{
     position: relative;
 }
+
 
 .img img{
     width: 70vw;
